@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.android.neo.tp.MainActivity">
+
+
+        <LinearLayout
+            android:id="@+id/main_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_margin="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="15sp"
+                android:text="Hello World" />
+            <Button
+                android:id="@+id/main_click_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Click Me !! " />
+            <Button
+                android:id="@+id/main_list_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#bada55"
+                android:text="Go to List Page !! " />
+            <Button
+                android:id="@+id/main_reset_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text="Reset !! "/>
+            <Button
+                android:id="@+id/main_advancedlist_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#BADA98"
+                android:text="Go to advanced List  !! "/>
+            <Button
+                android:id="@+id/main_card_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#BADA01"
+                android:text="Go to Card View View  "/>
+            <Button
+                android:id="@+id/main_fragment_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#AA51D5"
+                android:text="Go to Fragment View  "/>
+            <Button
+                android:id="@+id/main_dialer_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#DD5850"
+                android:text="Open Dialer"/>
+            <Button
+                android:id="@+id/main_intent_with_param_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#585"
+                android:text="Intent With Extras"/>
+            <Button
+                android:id="@+id/main_list_fragment_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#999"
+                android:text="OPEN LIST WITH FRAGMENTS"/>
+            <Button
+                android:id="@+id/main_preference_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#555"
+                android:text="OPEN PREFERENCES"/>
+            <Button
+                android:id="@+id/main_system"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#155"
+                android:text="OPEN SYSTEM CALLS"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

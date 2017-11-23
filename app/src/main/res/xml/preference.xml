@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Network">
+        <CheckBoxPreference
+            android:key="checkBoxNetwork"
+            android:title="TCP/UDP"
+            android:defaultValue="false"
+            android:summaryOn="Summary when selected"
+            android:summaryOff="Summary when not selected"
+            />
+        <EditTextPreference
+            android:title="Protocol"
+            android:text="IMAP"
+            android:key="networkType"
+            >
+
+        </EditTextPreference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Database">
+        <CheckBoxPreference
+            android:key="checkBoxDb"
+            android:title="SQlite"
+            android:defaultValue="true"
+            android:summaryOn="Summary when selected "
+            android:summaryOff="Summary when diselected "
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="List">
+        <ListPreference
+            android:title="Vitesse"
+            android:key="vitesse"
+            android:entries="@array/key"
+            android:entryValues="@array/value"
+            android:dialogTitle="Choisir la vitesse"
+            android:persistent="true">
+        </ListPreference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

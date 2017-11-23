@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.neo.tp.SystemActivity">
+
+    <Button
+        android:id="@+id/make_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make a CALL"
+        android:textColor="#fff"
+        android:background="@color/colorBadass"
+        android:textSize="15dp"/>
+    <Button
+        android:id="@+id/make_call_dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make a CALL USING DIALER"
+        android:textColor="#fff"
+        android:background="@color/colorAccent"
+        android:textSize="15dp"/>
+    <Button
+        android:id="@+id/make_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send an sms"
+        android:textColor="#fff"
+        android:background="@color/colorBadass"
+        android:textSize="15dp"/>
+
+</LinearLayout>
