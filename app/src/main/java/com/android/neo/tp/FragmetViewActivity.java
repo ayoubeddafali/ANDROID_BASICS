@@ -14,7 +14,6 @@ public class FragmetViewActivity extends AppCompatActivity   {
         setContentView(R.layout.activity_fragmet_view);
         FirstFragment f = new FirstFragment();
         SecondFragment s = new SecondFragment();
-
         getSupportFragmentManager().beginTransaction().add(R.id.first_fragment, f).commit();
         getSupportFragmentManager().beginTransaction().add(R.id.second_fragment, s).commit();
 

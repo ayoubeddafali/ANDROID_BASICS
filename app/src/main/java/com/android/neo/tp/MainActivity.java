@@ -4,29 +4,39 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
+import android.hardware.Camera;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.android.neo.tp.services.MyHelloService;
 
+import java.io.File;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
     public static int RECEIVER_INTENT_ACTIVITY_CODE = 100;
     @BindView(R2.id.main_text)
     TextView main_text ;
     Context context ;
     private MyBroadCastReceiver myreceiver ;
+
+    @BindView(R2.id.image)
+    ImageView image ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         context = getApplicationContext();
         ButterKnife.bind(this);
     }
+
     @OnClick(R2.id.main_click_btn) void click_btn_action(){
         main_text.setText("Text has changed !!");
     }
@@ -84,8 +95,49 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    @OnClick(R2.id.network_system) void open_network(){
+        Intent intent = new Intent(this, NetworkActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R2.id.start_camera) void open_camera(){
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+
+    }
+
+    @OnClick(R2.id.add_gallery) void addToGallery(){
+            Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+            File f = new File("image");
+            Uri contentUri = Uri.fromFile(f);
+            mediaScanIntent.setData(contentUri);
+            this.sendBroadcast(mediaScanIntent);
+
+    }
+
+    @OnClick(R2.id.maps) void openMap(){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R2.id.net_calls) void make_calls(){
+        Intent intent = new Intent(this, NetCallsActivity.class);
+        startActivity(intent);
+
+    }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            image.setImageBitmap(imageBitmap);
+        }
+    }
+
+   /*  @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -99,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
+        */
      class MyBroadCastReceiver extends BroadcastReceiver {
 
         @Override

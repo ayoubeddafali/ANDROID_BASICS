@@ -104,6 +104,48 @@
                 android:layout_marginTop="10dp"
                 android:background="#155"
                 android:text="OPEN SYSTEM CALLS"/>
+            <Button
+                android:id="@+id/network_system"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#855"
+                android:text="OPEN Network"/>
+            <Button
+                android:id="@+id/start_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#935"
+                android:text="OPEN Camera"/>
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 />
+            <Button
+                android:id="@+id/add_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#985"
+                android:text="Add Photo to Gallery"/>
+
+            <Button
+                android:id="@+id/maps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#195"
+                android:text="MAPS"/>
+            <Button
+                android:id="@+id/net_calls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#189"
+                android:text="Network Calls"/>
+
 
         </LinearLayout>
     </LinearLayout>

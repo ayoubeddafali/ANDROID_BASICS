@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.neo.tp.NetworkActivity">
+
+    <Button
+        android:id="@+id/check_cnx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#778855"
+        android:text="Check Connection Status &amp; Type" />
+
+    <Button
+        android:id="@+id/activate_deactivate_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#658"
+        android:text="Activate &amp; deactivate WIFI" />
+    <Button
+        android:id="@+id/activate_deactivate_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#369"
+        android:text="Activate &amp; deactivate BLUETOOTH" />
+
+    <Button
+        android:id="@+id/get_location_means"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#963"
+        android:text="LOCATION MEANS" />
+
+    <Button
+        android:id="@+id/get_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#663"
+        android:text="GET LATiTURE &amp; LONGITUDE" />
+
+</LinearLayout>
